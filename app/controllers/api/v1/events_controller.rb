@@ -1,6 +1,7 @@
 class Api::V1::EventsController < ApplicationController
   def index
-    @events = Event.order('start_datetime ASC')
+    # @events = Event.order('start_datetime ASC')
+    @events = Event.all
     render json: @events
   end
 
@@ -16,7 +17,7 @@ class Api::V1::EventsController < ApplicationController
   private
   
   def event_params
-    params.require(:event).permit(:title, :start_datetime, :location)
+    params.require(:event).permit(:title)
   end
   
 end
