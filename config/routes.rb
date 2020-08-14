@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'user/index'
+  get 'user/show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #root to: "static_pages#root"
   #root 'events#index'
 
-  namespace :api defaults: { format: :json } do
+  namespace :api do
     namespace :v1 do
       resources :events
       resources :users
