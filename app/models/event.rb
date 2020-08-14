@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
-    validates_presence_of :title, :start_datetime, :location
+    # validates_presence_of :title, :start_datetime, :location
     validates :title, length: {minimum: 3}
-    validate :start_datetime_cannot_be_in_the_past
+    # validate :start_datetime_cannot_be_in_the_past
 
     has_many :tickets
     has_many :bookmarks
