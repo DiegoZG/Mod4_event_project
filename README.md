@@ -23,3 +23,10 @@ Things you may want to cover:
 
 * ...
 # Mod4_event_project
+Api::V1::Games
+rails g model Api::V1::Event title:string start_datetime:datetime location:string
+rails g model Api::V1::Users username:string password_digest:string session_token:string
+rails g model Api::V1::Categories name:string
+rails g model Api::V1::EventCategories category_id:integer :event_id:integer
+rails g model Api::V1::Bookmarks user_id:integer event_id:integer
+rails g model Api::V1::Tickets user_id:integer event_id:integer
